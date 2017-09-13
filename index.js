@@ -1,22 +1,22 @@
 
 function countdown(callback){
-  window.setTimeout(callback(), 2000)
+  window.setTimeout(function(){
+    callback();
+  }, 2000)
 }
 countdown();
 function createMultiplier(multiplierValue){
-  return function () {
-    return 5 * multiplierValue
+  return function (value) {
+    return value * multiplierValue
   }
 }
 
 var doubler = createMultiplier(2);
 var tripler = createMultiplier(3);
 
-var doublerWithBind = 2;
-var triplerWithBind = 3;
 function multiplier(multiplierValue, value){
   return multiplierValue * value
 }
 
-doubler = multiplier.bind(doublerWithBind);
-multiplier.bind(triplerWithBind);
+var doublerWithBind = multiplier.bind(null, 2);
+var triplerWithBind = multiplier.bind(null, 3);
