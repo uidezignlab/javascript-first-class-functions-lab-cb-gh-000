@@ -20,3 +20,4 @@ function multiplier(multiplierValue, value){
 
 doubler = multiplier.bind(doublerWithBind);
 multiplier.bind(triplerWithBind);
+done()
