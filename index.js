@@ -1,5 +1,5 @@
-const doubler = 2;
-const tripler = 3;
+var doubler = 2;
+var tripler = 3;
 
 function countdown(callback){
   window.setTimeout(callback(), 2000)
@@ -10,8 +10,8 @@ function createMultiplier(multiplierValue){
     return 5 * multiplierValue
   }
 }
-let doublerWithBind = 2;
-let triplerWithBind = 3;
+var doublerWithBind = 2;
+var triplerWithBind = 3;
 function multiplier(multiplierValue, value){
   return multiplierValue * value
 }
