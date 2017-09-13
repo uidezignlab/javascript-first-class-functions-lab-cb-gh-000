@@ -2,7 +2,7 @@
 function countdown(callback){
   window.setTimeout(callback(), 2000)
 }
-
+countdown();
 function createMultiplier(multiplierValue){
   return function () {
     return 5 * multiplierValue
@@ -18,5 +18,5 @@ function multiplier(multiplierValue, value){
   return multiplierValue * value
 }
 
-multiplier.bind(doublerWithBind);
+doubler = multiplier.bind(doublerWithBind);
 multiplier.bind(triplerWithBind);
